@@ -1,0 +1,13 @@
+GET http://localhost:4004/odata/v4/catalog/Books
+
+###
+POST http://localhost:4004/odata/v4/catalog/Books
+Content-Type: application/json
+
+{"ID": 10, "title": "The Far Away Dream","stock": 5,"author_ID": 150}
+
+###
+POST http://localhost:4004/odata/v4/catalog/Orders
+Content-Type: application/json
+
+{"book_ID": 421, "quantity": 10}

@@ -1,0 +1,26 @@
+###
+GET http://localhost:4004/odata/v4/catalog/Authors
+
+###
+
+GET http://localhost:4004/odata/v4/catalog/Books
+
+###
+
+POST http://localhost:4004/odata/v4/catalog/Authors
+Content-Type: application/json
+
+  {"ID": 900, "name": "Douglas Samaniego"}
+
+###
+POST http://localhost:4004/odata/v4/catalog/Books
+Content-Type: application/json
+
+{"ID": 902, "title": "Sonho Alegre","stock": 3,"author_ID": 900}
+
+###
+GET http://localhost:4004/odata/v4/catalog/Authors?$expand=books
+
+###
+
+GET http://localhost:4004/odata/v4/catalog/Books?$expand=author

@@ -7,6 +7,7 @@ module.exports = srv => {
         const newBooks = []
         //Loop pelos livros
         xs.forEach(x => {
+            //Estoque maior que 500
             if (x.stock > 500) {
                 x.title = '(10% off!) ' + x.title
             }

@@ -13,18 +13,17 @@
     "@cap-js/sqlite": "^1",
     "sqlite3": "^5.1.7"
   },
+  "scripts": {
+    "start": "cds-serve"
+  },
   "cds": {
     "requires": {
-      "db":{
+      "db": {
         "kind": "sqlite",
         "credentials": {
           "database": "bookshop.db"
         }
-      },
-      "auth": "mocked"
+      }
     }
-  },
-  "scripts": {
-    "start": "npx cds run"
   }
 }
